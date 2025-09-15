@@ -1,0 +1,37 @@
+nav{
+  background-color:darkblue;
+  padding: 10px;
+}
+h1{
+  color:steelblue;
+}
+main img{
+  width:150px;
+  height:auto;
+  border:1px solid steelblue;
+  padding: 2px;
+  box-shadow: 0 0 30px gray;
+}
+
+aside{
+  width: 20em;
+  margin:1em;
+  border: 1px solid orange;
+  padding: 1em;
+  background-color : lightyellow; 
+  color:red;
+  text-align: center; 
+}
+aside img{
+  width: 100px;
+  height: auto;
+}
+h1 img{
+  width: 70px;
+  height: auto; 
+}
+footer{
+  margin-top: 1em;
+  border-top:1px;
+  text-align: center;
+}
