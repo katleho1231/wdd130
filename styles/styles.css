@@ -1,51 +1,81 @@
+/* Style the navigation bar container */
+nav {
+    background-color: darkblue; /* nav background */
+    padding: 10px;              /* spacing inside the nav */
+}
+
+/* Style the navigation links */
 nav a {
-  background-color:darkblue;
-  padding: 10px;
-  display: block;
-  text-decoration:none;
-  color: white; 
-
-}
-p{
-  padding:0em;
-}
-h1{
-  color:steelblue;
-}
-main img{
-  width:150px;
-  height:auto;
-  border:1px solid steelblue;
-  padding: 2px;
-  box-shadow: 0 0 30px gray;
+    color: white;               /* link text color */
+    padding: 10px 15px;         /* spacing around text */
+    display: block;             /* makes whole area clickable */
+    text-decoration: none;      /* removes underline */
+    margin-bottom: 5px;         /* space between links */
 }
 
-aside{
-  width: 20em;
-  margin:1em;
-  border: 1px solid orange;
-  padding: 1em;
-  background-color : lightyellow; 
-  color:red;
-  text-align: center; 
-}
-main{
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  background-color: lightgray;
+/* Style main heading */
+h1 {
+    color: steelblue;
+    text-align: center;
 }
 
-aside img{
-  width: 200px;
-  height: auto;
+/* Style paragraphs */
+p {
+    padding: 0;
+    line-height: 1.5;
 }
-h1 img{
-  width: 70px;
-  height: auto; 
+
+/* Style images inside main */
+main img {
+    width: 150px;
+    height: auto;
+    border: 1px solid steelblue;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+    display: block;
+    margin: 0 auto;
 }
-footer{
-  margin-top: 1em;
-  border-top:1px;
-  text-align: center;
+
+/* Style the main content */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+/* Style aside section */
+aside {
+    width: 20em;
+    margin: 20px auto;
+    border: 1px solid orange;
+    padding: 1em;
+    background-color: lightyellow;
+    color: red;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Style images inside aside */
+aside img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    border-top: 1px solid gray;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* Optional: make nav links horizontal on larger screens */
+@media (min-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin-right: 10px;
+    }
 }
