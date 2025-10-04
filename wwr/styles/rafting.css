@@ -1,5 +1,31 @@
+:root {
+  --primary-color: #055a05; /* forest green */
+  --secondary-color: #f4a261; /* warm sand */
+  --accent1-color: #264653; /* dark slate blue */
+  --accent2-color: #e9c46a; /* light golden yellow */
+  --heading-font: "Times New Roman", "Georgia", serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
 /* ===========================
-   Header Layout (Grid + Flex)
+   Global Reset & Body
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===========================
+ Header Layout (Grid + Flex)
 =========================== */
 header {
   display: grid;
@@ -31,13 +57,38 @@ header nav a:hover {
 }
 
 /* ===========================
-   History Section
+ Hero Section
+=========================== */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.8;
+  background-color: var(--accent1-color);
+  color: #fff;
+}
+
+/* ===========================
+ History Section
 =========================== */
 .history-content {
   display: grid;
   grid-template-columns: 1fr 1fr; /* text left, image right */
   gap: 20px;
   align-items: center;
+  margin-top: 20px;
 }
 
 .history-content img {
@@ -46,7 +97,7 @@ header nav a:hover {
 }
 
 /* ===========================
-   Adventures Gallery
+  Adventures Gallery
 =========================== */
 .adventure-gallery {
   display: grid;
@@ -72,7 +123,7 @@ header nav a:hover {
 }
 
 /* ===========================
-   Footer
+  Footer
 =========================== */
 footer {
   margin-top: 30px;
@@ -87,4 +138,38 @@ footer {
 footer .socialmedia {
   display: flex;
   gap: 15px;
+}
+
+footer .socialmedia a {
+  text-decoration: none;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+@media (max-width: 900px) {
+  .history-content {
+    grid-template-columns: 1fr; /* stack text above image */
+    text-align: center;
+  }
+
+  .adventure-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  header nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .adventure-gallery {
+    grid-template-columns: 1fr;
+  }
 }
