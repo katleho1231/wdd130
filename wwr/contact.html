@@ -5,17 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Title + Description -->
-  <title>White Water Rafting Adventures | Contact Us</title>
+  <!-- Title -->
+  <title>Contact Us – White Water Rafting Adventures</title>
+
+  <!-- Meta Description -->
   <meta name="description"
-    content="Contact White Water Rafting Adventures for reservations, general inquiries, or website suggestions. Reach our team by phone, email, or message form.">
+    content="Contact White Water Rafting Adventures to book trips, ask questions, or give suggestions.">
+
   <meta name="author" content="Katleho Selwana">
 
   <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
-  <!-- Header (kept same across site) -->
+  <!-- Header -->
   <header>
     <img src="images/z-raftingbw.png" alt="White Water Rafting Adventures Logo" class="logo">
     <nav>
@@ -27,19 +30,18 @@
   </header>
 
   <main>
-    <h1>Contact Us</h1>
-
-    <!-- Company Info -->
-    <section class="company-info">
-      <h2>Our Office</h2>
-      <p><strong>Address:</strong> 123 Adventure Road, Rapids City, CO 80000</p>
+    <!-- Contact Info -->
+    <section class="contact-info">
+      <h2>Contact Information</h2>
+      <p><strong>Address:</strong> 123 River Road, Adventure Town, USA</p>
       <p><strong>Phone:</strong> +1 (555) 123-4567</p>
       <p><strong>Email:</strong> info@wwrafting.com</p>
 
       <!-- Embedded Google Map -->
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345086166!2d144.95373531531687!3d-37.81627974202127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d8c5f5e7a2c4!2sAdventure%20Rafting!5e0!3m2!1sen!2sus!4v1670194829070!5m2!1sen!2sus"
-        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe id="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8359582312986!2d-122.41941508468123!3d37.77492977975947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085814b79b733b5%3A0x6c33c0d5cf814e5a!2sSan%20Francisco!5e0!3m2!1sen!2sus!4v1696428600000!5m2!1sen!2sus"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Company Location"></iframe>
     </section>
 
     <!-- Employee Profiles -->
@@ -47,16 +49,16 @@
       <h2>Meet Our Team</h2>
       <div class="employee-gallery">
         <figure>
-          <img src="images/emplyee-1.jpg" alt="Guide - Sarah Johnson" width="200">
-          <figcaption>Sarah Johnson – Lead Guide</figcaption>
+          <img src="images/emplyee-1.jpg" alt="John Doe - Head Guide" width="200">
+          <figcaption>John Doe - Head Guide</figcaption>
         </figure>
         <figure>
-          <img src="images/emplee-2.jpg" alt="Manager - David Lee" width="200">
-          <figcaption>David Lee – Operations Manager</figcaption>
+          <img src="images/emplee-2.jpg" alt="Jane Smith - Trip Coordinator" width="200">
+          <figcaption>Jane Smith - Trip Coordinator</figcaption>
         </figure>
         <figure>
-          <img src="images/emplyee-3.jpg" alt="Customer Support - Maria Gomez" width="200">
-          <figcaption>Maria Gomez – Customer Support</figcaption>
+          <img src="images/emplyee-3.jpg" alt="Mike Johnson - Safety Officer" width="200">
+          <figcaption>Mike Johnson - Safety Officer</figcaption>
         </figure>
       </div>
     </section>
@@ -66,36 +68,41 @@
       <h2>Send Us a Message</h2>
       <form action="#" method="post">
         <!-- Name -->
-        <label for="name">Your Name:</label>
+        <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
         <!-- Email -->
-        <label for="email">Your Email:</label>
+        <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
-        <!-- Purpose -->
-        <p>Purpose of Message:</p>
-        <label><input type="radio" name="purpose" value="general" required> General Inquiry</label>
-        <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-        <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+        <!-- Message Purpose -->
+        <fieldset>
+          <legend>Purpose of your message:</legend>
+          <input type="radio" id="general" name="purpose" value="General Inquiry" required>
+          <label for="general">General Inquiry</label><br>
+
+          <input type="radio" id="reservation" name="purpose" value="Reservation Question">
+          <label for="reservation">Reservation Question</label><br>
+
+          <input type="radio" id="suggestion" name="purpose" value="Website Suggestion">
+          <label for="suggestion">Website Suggestion</label>
+        </fieldset>
 
         <!-- Message -->
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
-        <!-- Newsletter -->
-        <label>
-          <input type="checkbox" name="newsletter">
-          Please subscribe me to the monthly newsletter
-        </label>
+        <!-- Newsletter Subscription -->
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Please subscribe me to the monthly newsletter</label><br>
 
-        <!-- Submit -->
+        <!-- Submit Button -->
         <button type="submit">Send Message</button>
       </form>
     </section>
   </main>
 
-  <!-- Footer (kept same across site) -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 White Water Rafting Adventures | Katleho Selwana</p>
     <nav class="socialmedia">
@@ -106,7 +113,7 @@
         <img src="images/twiter.png" alt="Twitter Link" width="30">
       </a>
       <a href="https://www.instagram.com" target="_blank">
-        <img src="images/" alt="Instagram Link" width="30">
+        <img src="images/instagram.png" alt="Instagram Link" width="30">
       </a>
     </nav>
   </footer>
